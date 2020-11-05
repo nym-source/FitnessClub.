@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.openBtn {
+  background: #f1f1f1;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.openBtn:hover {
+  background: #bbb;
+}
+
+.overlay {
+  margin-right: 15%;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: 20%;
+  height: 80%;
+  width: 90%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  background-color: white;
+}
+
+.overlay-content {
+  position: relative;
+  top: 15%;
+  width: 95%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 60px;
+  cursor: pointer;
+  color: red;
+}
+
+.overlay .closebtn:hover {
+  color: red;
+}
+
+
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: rgb(182, 5, 5);
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: red;
+}
+table {
+  font-family: arial, sans-serif;
+  font-size: 40px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<div id="myOverlay" class="overlay">
+  <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+  <div class="overlay-content">
+    <form action="/action_page.php">
+      <table >
+        <tr>
+          <th><b>Company</th>
+          <th>Contact</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+        </tr>
+        <tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+        </tr>
+        <tr>
+          <td>Ernst Handel</td>
+          <td>Roland Mendel</td>
+        </tr>
+        <tr>
+          <td>Island Trading</td>
+          <td>Helen Bennett</td>
+        </tr>
+        <tr>
+          <td>Laughing Bacchus Winecellars</td>
+          <td>Yoshi Tannamuri</td>
+        </tr>
+        <tr>
+          <td>Magazzini Alimentari Riuniti</td>
+          <td>Giovanni Rovelli</td>
+        </tr>
+      </table>
+      </form>
+  </div>
+</div>
+
+<h2>Fullscreen Search</h2>
+<p>Click on the button to open the search box.</p>
+<button class="openBtn" onclick="openSearch()">Open Search Box</button>
+
+<script>
+function openSearch() {
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeSearch() {
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+     
+</body>
+</html>
+<ul class="nav navbar-nav navbar-right">
+  {% if user.is_authenticated %}
+    <li><a href="{% url 'register' %}"><span ></span>welcome ,{{ user.username}}</a></li>
+    <li><a href="{% url 'register' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+  
+  {% else %}
+  <li><a href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+  <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+  {% endif %}
+</ul>

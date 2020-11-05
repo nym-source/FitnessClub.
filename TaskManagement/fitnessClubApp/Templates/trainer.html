@@ -1,0 +1,560 @@
+<html>
+    <head>
+        <title>history page
+        </title>
+        {%load static %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+      
+      <style>
+        #tag{
+          position: relative;
+          margin-top: 4%;
+          margin-left: 7%;
+          margin-right: 20%;
+          width: 70%;
+        }
+        #shado{
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.658), 0 6px 20px 0 rgba(8, 8, 8, 0.658);
+          
+        }
+        .search{
+            float: left;
+        }
+        input[type=text] {
+            width: 130px;
+            float: left;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            background-position: 10px 10px; 
+            background-repeat: no-repeat;
+            padding: 11px 15px 3px 35px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+          }
+          
+          input[type=text]:focus {
+            width: 100%;
+          }
+
+
+          .space{
+              position: relative;
+              top: 120px;
+          }
+
+          
+
+
+      </style>
+        
+    </head>
+    <body>
+      <section>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+          <a class="navbar-brand" href="newhome.html" class="fa fa-home" ><b>FITNESS-CLUB</b></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'index' %}"><b>HOME</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'lol_Teacher' %}"><b>TRAINERS</b></a>
+             </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'history' %}"><b>HISTORY</b></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'info' %} "><b>DEVELOPER</b></a>
+              </li>    
+
+              <li class="nav-item">
+                <input type="text"  class="search" name="search" placeholder="Search..">
+
+              </li>
+
+              <div class="container" style="float: right; margin-right: -15%;">                                         
+                <div class="dropdown">
+                  <button type="button" class="btn btn-secoundry dropdown-toggle" data-toggle="dropdown" style="color: rgb(168, 164, 159);" >
+                  <b>Choose Field</b> 
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#gaurav">Fitness GYM </a>
+                    <a class="dropdown-item" href="#ledy_gym">Fitness Workout</a>
+                    <a class="dropdown-item" href="#krate1">Karate Training</a>
+                    <a class="dropdown-item" href="#yoga">Yoga Classes</a>
+                    <a class="dropdown-item" href="#dance">Dance Classes</a>
+                    <a class="dropdown-item" href="#arbic">Arbic Classes</a>
+                    <a class="dropdown-item" href="#dite">Dite and Fitness Awareness </a>
+                    <a class="dropdown-item" href="#befit">Be FIT </a>
+                  </div>
+                </div>
+              </div>
+              
+              </ul>
+          </div>  
+          </nav>       
+        
+        <div id="tag" class="coutainer" class="main">
+            <div class="row" >
+              <div class="col-md-4">
+                <br>
+               <br>
+                <div class="card" class="border" id="shado" id="gaurav" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'history/gaurav.jpg' %}" alt="gaurav taneja">
+                    <div class="card-body">
+                      <h5 class="card-title"  ><b><u> Gaurav Taneja </u></b></h5>
+                      <p class="card-text">Gaurav Taneja is a popular youtube vlogger and has a youtube channel called Flying Beast and Fit Muscle TV.You are a certified nutritionist, a professional bodybuilder you make vlogs, Now, he has more than ONE million subscribers on youtube and he was also awarded by youtube with a gold play button.  <b>(Gym Trainer)</b> </p>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                          <b>Start 5 Days FREE Trial </b>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'post'%}">Fitness Trial         RS/***</a>
+                          <a class="dropdown-item active" href="{% url 'post'%}">        Monthly Subscription  RS/****</a>
+                          <a class="dropdown-item active" href="{% url 'post'%}">        Sort Monthly Subscription  RS/****</a>
+                          <a class="dropdown-item disabled" href="{% url 'post'%}">      Yrarly Subscription   RS/*****</a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+               </div>
+               
+               <br>
+               <div class="col-md-4">
+                <br>
+                <br>
+                <div class="card" class="border" id="shado" style="width: 18rem;">
+                    <img class="card-img-top" src="https://s4.scoopwhoop.com/anj/singh/164962165.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>Yatinder Singh</u> </b></h5>
+                      <p class="card-text">Yatinder Singh is an Indian Pro-bodybuilder, entrepreneur and fitness icon. His most recent accomplishments include the winning title of Silver medal in 7th World Body Building[1] and Physique Championship 2015 and Mr. India 2016.   <b>(Gym Trainer)</b></p>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background: rgba(0, 0, 0, 0.801);">
+                          <b>Start 5 Days FREE Trial </b>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'GYMTrainer'%}">Fitness Trial         </a>
+                          <a class="dropdown-item active" href="{% url 'GYMTrainer'%}">        Monthly Subscription  </a>
+                          <a class="dropdown-item active" href="{% url 'GYMTrainer'%}">        Sort Monthly Subscription  </a>
+                          <a class="dropdown-item disabled" href="{% url 'GYMTrainer'%}">      Yrarly Subscription </a>
+                        </div>
+                      </div><br>
+                    </div>
+                </div>
+               </div>
+               <br>
+               <br>
+               <br>
+               <div class="col-md-4">
+                <br>
+                <br>
+                <div class="card" style="width: 18rem;" id="shado">
+                    <img class="card-img-top" src="https://i2.wp.com/thepressdailynews.com/wp-content/uploads/2020/03/1584843051_hqdefault.jpg?fit=480%2C360&ssl=1&resize=350%2C200" alt="Mukesh Singh Gahlot">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>Riz Sunny</u></b></h5>
+                      <p class="card-text">E-gymming has gained foothold worldwide, as it allows people to avail the benefits of fitness instructions from a celebrity trainer at the comfort of their home.successful example of this is ‘My Bollywood body’ which is fitness channel on U-Tube. 2.3 million subscribers & 160+ million views on videos. <b>(Gym Trainer)</b></p>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                          <b>Start 5 Days FREE Trial </b>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'paidpost'%}">Fitness Trial         </a>
+                          <a class="dropdown-item active" href="{% url 'paidpost'%}">        Monthly Subscription  </a>
+                          <a class="dropdown-item active" href="{% url 'paidpost'%}">        Sort Monthly Subscription  </a>
+                          <a class="dropdown-item disabled" href="{% url 'paidpost'%}">      Yrarly Subscription   </a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+               </div>
+               <br>  
+               <br>
+               <br>
+               <br>
+
+               <div class="col-md-4" id="ledy_gym">
+                <br>
+                <br>
+                <div class="card" style="width: 18rem;" id="shado">
+                    <img class="card-img-top" src="https://i.ytimg.com/vi/AeVxXPzB1Yc/maxresdefault.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"  ><b><u>Skimble.</u></b></h5>
+                      <p class="card-text">Despite launching their YouTube channel less than two years ago, four fitness vloggers calling
+                        themselves Allblanc are seeing their popularity soar with more than 400,000 subscribers.
+                        Their workout videos are set at all kinds of places from the gym, office, park and
+                        even at a village featuring Hanok (traditional Korean architecture).
+                        </p>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background: rgba(0, 0, 0, 0.801);">
+                          <b>Start 5 Days FREE Trial </b>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'fitness'%}">Fitness Trial         RS/**</a>
+                          <a class="dropdown-item active" href="{% url 'fitness'%}">        Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item active" href="{% url 'fitness'%}">        Sort Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item disabled" href="{% url 'fitness'%}">      Yrarly Subscription   RS/*****</a>
+                        </div>
+                      </div><br>
+                    </div>
+                </div>
+               </div>
+               <br>
+               <br>
+               <br>
+               <br>
+               <br>
+
+               <div class="col-md-4">
+                <br>
+                <br>
+                <div class="card" style="width: 18rem;" id="shado">
+                    <img class="card-img-top" src="https://www.puma-catchup.com/wp-content/uploads/2017/03/Pamela-Reif_H2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>Pamela Reif</u></b></h5>
+                      <p class="card-text">Reif wurde 1996 in Karlsruhe geboren.legte sie am Heisenberg-Gymnasium in Karlsruhe das Abitur mit der Durchschnittsnote Seit 2012 ist sie aktiv bei dem Onlinedienst Instagram, auf dem sie zunächst Bilder von Landschaften und Essen veröffentlichte. Bekannt wurde sie, Im Juli 2020 hatte sie dort rund Millionen Abonnenten.</p>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                          <b>Start 5 Days FREE Trial </b>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'fitness1'%}">Fitness Trial         RS/**</a>
+                          <a class="dropdown-item active" href="{% url 'fitness1'%}">        Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item active" href="{% url 'fitness1'%}">        Sort Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item disabled" href="{% url 'fitness1'%}">      Yrarly Subscription   RS/*****</a>
+                        </div>
+                      </div><br>
+                    </div>
+                </div>
+               </div>
+               <br>
+               <br>
+               <br>
+               <br>
+               <br>
+               <br>
+
+               <div class="col-md-4" >
+                <br>
+                <br>
+                <div class="card" style="width: 18rem;" id="shado">
+                    <img class="card-img-top" src="https://i.ytimg.com/vi/WdNSMKHwL5k/maxresdefault.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>Somya</u></b></h5>
+                      <p class="card-text">GLOW is an American comedy-drama television series created by Liz Flahive and Carly Mensch for Netflix. The series revolves around a fictionalization of the characters and gimmicks of 1980s syndicated women's professional wrestling circuit Gorgeous Ladies of Wrestling founded by D. McLane Netflix renewed the series for a second season of 10 episodes, which was released on June .</p>
+                        <div class="dropdown">
+                          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background: rgba(0, 0, 0, 0.801);">
+                            <b>Start 5 Days FREE Trial </b>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'paidpost'%}">Fitness Trial         RS/**</a>
+                          <a class="dropdown-item active" href="{% url 'paidpost'%}">        Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item active" href="{% url 'paidpost'%}">        Sort Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item disabled" href="{% url 'paidpost'%}">      Yrarly Subscription   RS/*****</a>
+                        </div>
+                        </div>
+                        
+                    </div>
+                </div>
+               </div>
+               <div class="col-md-4" id="krate1">
+                <br>
+                <br>
+                <div class="card" style="width: 18rem;" id="shado">
+                    <img class="card-img-top" src="https://cdn2731.templcdn.com/wp-content/uploads/JESSE_ENKAMP_KBJ_FB_IMAGE.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>Jesse Enkamp</u></b></h5>
+                      <p class="card-text">My name is Jesse Enkamp. I’m a passionate "Karate Nerd", who loves helping people improve their Karate.
+
+                        I publish educational content and teach seminars around the world, in an effort to elevate the collective consciousness of Karate - regardless of style, age or experience.
+                        
+                        If this is your first visit, read my Free 7-Day Karate Nerd Guide.
+                        
+                        Thanks & welcome again!</p>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                          <b>Start 5 Days FREE Trial </b>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'meditationpost1'%}">Fitness Trial         RS/**</a>
+                          <a class="dropdown-item active" href="{% url 'meditationpost1'%}">        Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item active" href="{% url 'meditationpost1'%}">        Sort Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item disabled" href="{% url 'meditationpost1'%}">      Yrarly Subscription   RS/*****</a>
+                        </div>
+                      </div><br>
+                    </div>
+                </div>
+               </div>
+               <div class="col-md-4">
+                <br>
+                <br>
+                <div class="card" style="width: 18rem;" id="shado">
+                    <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/51C992P7PtL.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>Krav Maga Instructor</u></b></h5>
+                      <p class="card-text">Shigeru Egami, Chief Instructor of Shotokan Dōjō, opined that "the majority of followers of karate in overseas countries pursue karate only for its fighting techniques ... Movies and television ... depict karate as a mysterious way of fighting capable of causing death or injury with a single blow ... the mass media present a pseudo art far from the real thing.</p>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                          <b>Start 5 Days FREE Trial </b>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'meditationpost2'%}">Fitness Trial         RS/**</a>
+                          <a class="dropdown-item active" href="{% url 'meditationpost2'%}">        Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item active" href="{% url 'meditationpost2'%}">        Sort Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item disabled" href="{% url 'meditationpost2'%}">      Yrarly Subscription   RS/*****</a>
+                        </div>
+                      </div><br>
+                    </div>
+                </div>
+               </div>
+               <div class="col-md-4">
+                <br>
+                <br>
+                <div class="card" style="width: 18rem;" id="shado">
+                    <img class="card-img-top" src="https://i.ytimg.com/vi/IKgVUf1REWI/sddefault.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>Indian Instructor</u></b></h5>
+                      <p class="card-text">Karate is one of the most popular and practiced martial arts in India. Because of Its simplicity & incredibly fast application time. Karate originated in the island of Okinawa with the influence of Chinese Gong Fu which, in turn had been influenced by ancient Indian martial arts.</p>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                          <b>Start 5 Days FREE Trial </b>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'paidpost'%}">Fitness Trial         RS/**</a>
+                          <a class="dropdown-item active" href="{% url 'paidpost'%}">        Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item active" href="{% url 'paidpost'%}">        Sort Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item disabled" href="{% url 'paidpost'%}">      Yrarly Subscription   RS/*****</a>
+                        </div>
+                      </div><br>
+                    </div>
+                </div>
+               </div>
+               <div class="col-md-4" id="yoga">
+                <br>
+                <br>
+                <div class="card" style="width: 18rem;" id="shado">
+                    <img class="card-img-top"  src="https://i.ytimg.com/vi/OQ6NfFIr2jw/maxresdefault.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u> Adriene </u></b></h5>
+                      <p class="card-text">Getting back to the true you. It can be that simple. Yoga offers up a way for us to see a world that is working for you instead of against you. Yoga reminds me that everything is connected so we must live, act, breathe with awareness. The process is the candy. Enjoy!</p>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                          <b>Start 5 Days FREE Trial </b>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'yogapost'%}">Fitness Trial         RS/**</a>
+                          <a class="dropdown-item active" href="{% url 'yogapost'%}">        Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item active" href="{% url 'yogapost'%}">        Sort Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item disabled" href="{% url 'yogapost'%}">      Yrarly Subscription   RS/*****</a>
+                        </div>
+                      </div><br>
+                    </div>
+                </div>
+               </div>
+               <div class="col-md-4">
+                <br>
+                <br>
+                <div class="card" style="width: 18rem;" id="shado">
+                    <img class="card-img-top" src="https://bohobeautiful.life/wp-content/uploads/2019/11/vegan-spicoluk.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>Juliana Spicoluk <br> Mark Spicoluk.</u></b></h5>
+                      <p class="card-text">Whether it’s through yoga, meditation, travelling, conscious living, or fitness we strive to put our energy into creating content that will contribute to a more positive collective footprint.
+
+                        .</p>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                          <b>Start 5 Days FREE Trial </b>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'yogapost1'%}">Fitness Trial         RS/**</a>
+                          <a class="dropdown-item active" href="{% url 'yogapost1'%}">        Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item active" href="{% url 'yogapost1'%}">        Sort Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item disabled" href="{% url 'yogapost1'%}">      Yrarly Subscription   RS/*****</a>
+                        </div>
+                      </div><br>
+                    </div>
+                </div>
+               </div>
+               <div class="col-md-4">
+                <br>
+                <br>
+                <div class="card" style="width: 18rem;" id="shado">
+                    <img class="card-img-top" src="https://4.bp.blogspot.com/-_vmrtaMizp0/WpIu7jGqAoI/AAAAAAAAAg0/Xjzl6iFFeH8G2aqUXXPq2tFRGSEJbURjwCLcBGAs/s1600/unnamed.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>Natasha Noel</u></b></h5>
+                      <p class="card-text">Yoga is one of the six schools of Hinduism, and India is a predominantly Hindu country. Through yoga, one is introduced to the spiritual philosophy of Hinduism, which is very different from most other world views. Yoga studies is a dedicated field of study of this art form.</p>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                          <b>Start 5 Days FREE Trial </b>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'paidpost'%}">Fitness Trial         RS/**</a>
+                          <a class="dropdown-item active" href="{% url 'paidpost'%}">        Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item active" href="{% url 'paidpost'%}">        Sort Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item disabled" href="{% url 'paidpost'%}">      Yrarly Subscription   RS/*****</a>
+                        </div>
+                      </div><br>
+                    </div>
+                </div>
+               </div>
+               <div class="col-md-4" id="dance">
+                <br>
+                <br>
+                <div class="card" style="width: 18rem;" id="shado">
+                    <img class="card-img-top" src="https://i.ytimg.com/vi/u9WSHvqY6VQ/maxresdefault.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>Deepak Tulsyan</u></b></h5>
+                      <p class="card-text">GM Dance Center is very popular dance channel on YouTube and he is having over 2.8 Million subscribers on his channel.It received wide critical acclaim by the urban media in Britain with Echoes magazine labelling it, Check profile of stars student of GM Dance Center - Akshita Goel, Pari Singhal
+                      </p>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                          <b>Start 5 Days FREE Trial </b>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'dancepost'%}">Fitness Trial         RS/**</a>
+                          <a class="dropdown-item active" href="{% url 'dancepost'%}">        Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item active" href="{% url 'dancepost'%}">        Sort Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item disabled" href="{% url 'dancepost'%}">      Yrarly Subscription   RS/*****</a>
+                        </div>
+                      </div><br>
+                    </div>
+                </div>
+               </div>
+               <div class="col-md-4" id="dance">
+                <br>
+                <br>
+                <div class="card" style="width: 18rem;" id="shado">
+                    <img class="card-img-top" src="https://i.ytimg.com/vi/sxdCj7C5ApQ/maxresdefault.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>B-Funk</u></b></h5>
+                      <p class="card-text">The B-Funk was released in November 1995 on independent record label Dome Records. It received wide critical acclaim by the urban media in Britain with Echoes magazine labelling it "the best British soul album ever" and Billboard magazine stating that "this lady is on her way to becoming an international star.</p>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                          <b>Start 5 Days FREE Trial </b>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'dancepost1'%}">Fitness Trial         RS/**</a>
+                          <a class="dropdown-item active" href="{% url 'dancepost1'%}">        Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item active" href="{% url 'dancepost1'%}">        Sort Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item disabled" href="{% url 'dancepost1'%}">      Yrarly Subscription   RS/*****</a>
+                        </div>
+                      </div><br>
+                    </div>
+                </div>
+               </div>
+               <div class="col-md-4" id="dance">
+                <br>
+                <br>
+                <div class="card" style="width: 18rem;" id="shado">
+                    <img class="card-img-top" src="https://gmdancecentre.com/wp-content/uploads/2018/11/IMG_0083.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>G M Dance Centre</u></b></h5>
+                      <p class="card-text"> we can do anything or gets success if we have some talent. Deepak also gets success in his life with his talent. He become a famous dancer and choreographer. when his childhood dream was fulfilled by opening a dance academy named GM dance cantre.</p>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                          <b>Start 5 Days FREE Trial </b>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'paidpost'%}">Fitness Trial         RS/**</a>
+                          <a class="dropdown-item active" href="{% url 'paidpost'%}">        Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item active" href="{% url 'paidpost'%}">        Sort Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item disabled" href="{% url 'paidpost'%}">      Yrarly Subscription   RS/*****</a>
+                        </div>
+                      </div><br>
+                    </div>
+                </div>
+               </div>
+               <div class="col-md-4" id="arbic">
+                <br>
+                <br>
+                <div class="card" style="width: 18rem;" id="shado">
+                    <img class="card-img-top" src="https://i.ytimg.com/vi/zVY_7OFCrEQ/maxresdefault.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>leilah isaac</u></b></h5>
+                      <p class="card-text">Leilah is an award-winning belly dancer, personal trainer and actress. She has brought the idea of belly dance fitness to the world for women to become fitter.                      
+                        Leilah has created videos with top fitness creators in world including Lionsgate’s BeFiT. She holds classes in London and is available for group classes.</p>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                          <b>Start 5 Days FREE Trial </b>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'arbicpost'%}">Fitness Trial         RS/**</a>
+                          <a class="dropdown-item active" href="{% url 'arbicpost'%}">        Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item active" href="{% url 'arbicpost'%}">        Sort Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item disabled" href="{% url 'arbicpost'%}">      Yrarly Subscription   RS/*****</a>
+                        </div>
+                      </div><br>
+                    </div>
+                </div>
+               </div>
+               <div class="col-md-4" id="befit">
+                <br>
+                <br>
+                <div class="card" style="width: 18rem;" id="shado">
+                    <img class="card-img-top" src="https://i.ytimg.com/vi/VUwy5ovLs7w/maxresdefault.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>BE FIT</u></b></h5>
+                      <p class="card-text">Physical fitness is a state of health and well-being and, the ability to perform aspects of sports, daily activities. Physical fitness is generally achieved through proper nutrition, physical exercise, and sufficient rest However, with automation and changes in lifestyles physical fitness is now considered a measure of the body's ability to function .</p>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                          <b>Start 5 Days FREE Trial </b>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="{% url 'befit'%}">Fitness Trial         RS/**</a>
+                          <a class="dropdown-item active" href="{% url 'befit'%}">        Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item active" href="{% url 'befit'%}">        Sort Monthly Subscription  RS/*****</a>
+                          <a class="dropdown-item disabled" href="{% url 'befit'%}">      Yrarly Subscription   RS/*****</a>
+                        </div>
+                      </div><br>
+                    </div>
+                </div>
+               </div>
+               <div class="col-md-4" id="dite">
+                <br>
+                <br>
+                <div class="card" style="width: 18rem;" id="shado">
+                    <img class="card-img-top" src="https://www.indushealthplus.com/media/article_img/thumb_image_colon-cancer-diet-facts-awareness-thumb.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>Fitness Dite & Awareness</u></b></h5>
+                      <p class="card-text">Fitness is defined as the quality or state of being fit and healthy. Around 1950, the treatise of World War II, the term "fitness" increased in western vernacular by a factor of ten. The modern definition of fitness describes either a person or machine's ability to perform a specific function or a holistic definition of human adaptability to cope with various situations. </p>
+                          <a href="{% url 'ditepost'%}" class="btn btn-primary"><b>Go to the page for Free </b></a>
+                          <br>
+                    </div>
+                </div>
+               </div>
+            </div>
+          </div>    
+      </section>
+
+      
+
+
+
+      
+
+
+
+
+      <div class="bottom">
+        <br>
+        <br>
+        <br>
+    </div>
+ 
+           
+    </body>
+</html>

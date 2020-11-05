@@ -1,0 +1,291 @@
+#move{
+    right: 30px;
+    padding: 10px;
+}
+#navsign{
+    float: right;
+    right: 30px;
+}
+#navlog{
+    padding: 150px;
+}
+#jum{
+    background-image: url("https://img4.goodfon.com/wallpaper/nbig/6/d1/brunette-workout-fitness-gym.jpg");   
+    
+}
+.lowimd{
+    position: relative;
+    top: 220px;
+    float: left;
+    left: 130px;
+}
+#pr{
+    position: relative;
+    float: right;
+    top: 140px;
+    right: -100px;
+    font-size: 40px;
+    font-style: inherit;
+    color: rgb(24, 18, 18);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#id{
+    color: gold;
+}
+#fif{
+    position: absolute;
+    float: left;
+    top: 52%;
+    left: 580px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(32, 29, 29);
+    width: 50%;
+}
+#war{
+    position: absolute;
+    float: left;
+    top: -10%;
+    left: 65px;
+    background-color: rgb(12, 11, 11);
+    color: gold;
+    width: 100%;
+}
+.oyo{
+    position: relative;
+    background-color: black;
+    top: 960px;
+}
+
+#fontmain{
+    position: relative;
+    color: white;
+    float: left;
+    left :80px;
+}
+#bo{
+    position: relative;
+    top: 20px;
+    float: right;
+    right: 200px;
+}
+#lowimg{
+    position: relative;
+    top: 150px;
+    float: left;
+    left: 150px;
+}
+
+
+
+#button{
+    float: left;
+    left: 1220px;
+}
+
+
+
+.btn-circle.btn-xl {
+    position: relative;
+    top: 20px;
+    width: 150px;
+    height: 150px;
+    border-color: blue;
+    background-image: url("https://cdn2.vectorstock.com/i/1000x1000/23/51/fitness-barbel-gold-logo-vector-14982351.jpg");
+    background-size: 150px 190px;
+    border-radius: 35px;
+    font-size: 24px;
+    left: 200px;
+}
+#set1{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcScuFbwsT7kRfChX3mmV0jHNwpBvNGbyCOC0g&usqp=CAU");
+    position: relative;
+    background-size: 155px 190px;
+
+}
+#set2{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQSNgEWgImiiKE1L11UVSoaVBMRT0bb0u0bNg&usqp=CAU");
+    position: relative;
+    left: 205px;
+    background-size: 150px 160px;
+}
+#set3{
+    background-image: url("https://st3.depositphotos.com/16134942/36076/v/950/depositphotos_360767350-stock-illustration-gold-logo-dance-studio-pole.jpg");
+    position: relative;
+    left: 205px;
+    background-size: 150px 150px;
+}
+#set4{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTe5hFZ13dJgWoIb4CsQ8VSBeiXxY4hXm65Xw&usqp=CAU");
+    position: relative;
+    left: 205px;
+    background-size: 150px 110px;
+
+}
+#set5{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRkpixR7Or_loxaT8TvfQ5qBcpDy9W_n-f3zw&usqp=CAU");
+    position: relative;
+    left: 205px;
+    background-size: 150px 140px;
+}
+#set6{
+    background-image: url("https://us.123rf.com/450wm/vectorv/vectorv1912/vectorv191238876/136073755-gold-stopwatch-with-basketball-ball-inside-icon-isolated-on-black-background-basketball-time-sport-a.jpg?ver=6");
+    position: relative;
+    left: 205px;
+    background-size: 150px 150px;
+}
+#set7{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSrv1IvZSF-FR1ZJwErX_hv_fl1hcFfuIolsA&usqp=CAU");
+    position: relative;
+    left: 205px;
+    background-size: 150px 170px;
+}
+
+#left{
+    position: relative;
+    float: right;
+}
+
+#coun{
+    position: relative;
+    top: 110px;
+    float: left;
+    left: 0%;
+    color: rgb(31, 24, 24);
+
+}
+
+#text{
+    width: 10%;
+}
+
+
+/* new home*/
+
+
+.myButton {
+    background-color:#44c767;
+    border-radius:42px;
+    border:4px solid #18ab29;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:28px;
+    padding:32px 13px;
+    text-decoration:none;
+    text-shadow:3px 3px 10px #2f6627;
+}
+.myButton:hover {
+    background-color:#5cbf2a;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+#tag{
+    position: relative;
+    margin-top: 4%;
+    margin-left: 7%;
+    margin-right: 20%;
+    width: 70%;
+  }
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+/*
+cretor.css
+*/
+
+#certificate{
+    margin-left: 15%;
+}
+
+
+
+/*
+ HISTORY>CSS
+*/
+
+
+.search{
+    float: left;
+}
+input[type=text] {
+    width: 130px;
+    float: left;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 11px 15px 3px 35px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  input[type=text]:focus {
+    width: 100%;
+  }
+
+
+.space{
+    position: relative;
+    top: 120px;
+}
+
+
+
+#hg{
+    height: 100px;
+    width: 150px;
+}
+
+.border{
+    border-style: double;
+    border-color: red;
+}
+
+#add{
+    position: absolute;
+    margin-top: 11%;
+    float: left;
+    right: 10%;
+    background-color: black;
+    width: 13%;
+    height: 100%;
+}
+
+  
+section {
+    display: -webkit-flex;
+    display: flex;
+  }
+  aside {
+    width: 30%;
+    padding-left: 100px;
+    margin-left: 90px;
+    float: right;
+    font-style: italic;
+    background-color: red;
+  }
+
+  .bottom{
+    background-color: black;
+    width: 100%;
+    height: 170px;
+}

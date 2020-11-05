@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+{% load static%}
+
+<style>
+
+
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #a09999;
+}
+.polaroid {
+  box-shadow: 0 4px 8px 0 rgba(8, 8, 8, 0.2), 0 6px 20px 0 rgba(14, 13, 13, 0.19);
+  border-style: double; 
+  border-color: rgba(14, 13, 13, 0.19); 
+  background-color: rgba(14, 13, 13, 0.19);
+  }
+
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.left{
+  float: left;
+  margin-left: 6%;
+  color: dimgrey;
+}
+
+  
+#bod {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-bottom: 5%;
+  } 
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+  
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+  box-shadow: 0 4px 8px 0 rgba(8, 8, 8, 0.2), 0 6px 20px 0 rgba(14, 13, 13, 0.19);
+  border-style: double; 
+  border-color: rgba(14, 13, 13, 0.19); 
+  background-color: rgba(14, 13, 13, 0.19);
+}
+
+.container {
+  background-color: #686262;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #0d0e0d;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+    
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+  #hard{
+    color: rgb(129, 118, 118);
+  }
+  .blur{
+    color: rgb(129, 118, 118);
+  }
+
+    
+@media (min-width: 250px) {
+  .dis{
+    display: none;
+  }  
+  
+} 
+  
+}
+</style>
+</head>
+<body>
+
+  <style>
+    @media (min-width: 700px) {
+      div#mo {
+        background-color: black; 
+        height: 150px; 
+        width: 100%;
+      }  
+    } 
+   
+  </style>
+ 
+
+<div class="polaroid" id="mo" style="background-color: black; height: 135px; width: 100%;" >
+  <h1 style="float: left; color: blanchedalmond; padding-left: 1.50%; padding-right: 1.50%; padding-top: 1.50%; padding-bottom: 0%;">Fitness-Club</h1>
+  <div class="chip" style="margin: 2.50%; float: right;  ">
+    {% if user.is_authenticated %}
+      <img src="{% static 'logo/pop.jpg' %}" alt="Person" width="596" height="350">
+      <b><u>{{ user.username}}</u>* </b>
+    {% endif %}
+  </div>
+</div>
+
+
+<div class="polaroid" >
+    <br><br>
+  
+  <div class="row" id="bod" style="margin-top: 5%;" >
+    <div class="col-75 ">
+      <div class="container">
+            <div class="col-50" >
+              <h3 style="text-align: center; color: rgb(231, 237, 241);" ><b>------PAY------ </b></h3>
+              <label for="fname" style="color: rgb(231, 237, 241);" >Accepted Cards</label>
+              <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+              </div>
+              
+              <div class="row">
+                <div class="col-50">
+                  <label for="expyear" style="color: rgb(231, 237, 241);">Name on Card (Card-Holder)</label>
+                  <input type="text" id="expyear" name="expyear" placeholder="pratik jain">
+                </div>
+                <div class="col-50">
+                  <label for="ccnum" style="color: rgb(231, 237, 241);">Credit card number</label>
+                  <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                </div>
+              </div>
+              <form method="POST">
+                {% csrf_token %}
+              
+                <div class="row">
+                  <div class="col-50">
+                    <div class="container" style="width: 90%; border-color: rgba(0, 0, 0, 0.308);">
+                      <div class="dropdown" >
+                        <button  class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" name="gym" >Your Fields
+                        <span class="caret"></span></button>
+                       
+                        <ul class="dropdown-menu" name="gym">
+                          <li><a type="checkbox" value="Gaurav"  >Gym Trainning</a></li>
+                          <li><a type="checkbox" value="Disabled" >Fitness Trainning</a></li>
+                          <li><a href="checkbox" value="Active" >Self Defence</a></li>
+                          <li><a href="checkbox" value="Normal" >Yoga Classes</a></li>
+                          <li><a href="checkbox" value="Normal" >Dance Club</a></li>
+                          <li><a href="checkbox" value="Normal" >Arbic Dance Club</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-50">
+                    <div class="container" style="width: 90%; border-color: rgba(0, 0, 0, 0.308);">
+                      <div class="dropdown" >
+                        <button  class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" name="gym" >Your trainer
+                        <span class="caret"></span></button>
+                       
+                        <ul class="dropdown-menu" name="gym">
+                          <li><a type="checkbox" value="Gaurav"  >Gaurav Taneja</a></li>
+                          <li><a type="checkbox" value="Disabled" >Yatinder Singh</a></li>
+                          <li><a href="checkbox" value="Active" >Riz Sunny</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+              
+              <label for="expmonth" style="color: rgb(231, 237, 241);">Exp Month</label>
+              <input type="text" id="expmonth" name="expmonth" placeholder="September">
+              <div class="row">
+                <div class="col-50">
+                  <label for="expyear" style="color: rgb(231, 237, 241);">Exp Year</label>
+                  <input type="text" id="expyear" name="expyear" placeholder="2018">
+                </div>
+                <div class="col-50">
+                  <label for="cvv" style="color: rgb(231, 237, 241);">CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="352">
+                </div>
+                <div class="col-50">
+                  <label for="Amount" style="color: rgb(231, 237, 241);">Amount</label>
+                  <input type="text" id="amaount" name="amaount" placeholder="999 RS.">
+                </div>
+              </div>
+            </div>
+          
+            <label>
+              <input type="checkbox" checked="checked" name="sameadr" style="color: rgb(88, 66, 185); "> Shipping address same as billing
+            </label>
+            <button type="submit" value="Continue to checkout" class="btn">Continue to checkout</button>
+          </div>
+        </form>
+    </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+</body>
+</html>

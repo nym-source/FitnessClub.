@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>FITNESS-CLUB HOME</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<style>
+    .responsive {
+        width: 100%;
+        height: auto;
+            }
+
+    #tagg{
+        position: relative;
+        margin-top: 4%;
+        margin-left: 11%;
+        width: 78%;
+    }
+    .why1{
+        font-size: 25px;
+        margin-left: 12%;
+        color: rgb(43, 41, 41);
+        }
+
+    .cardl{
+        position: static;
+        margin-left: 2%;
+        }
+    
+    .bottom{
+        background-color: rgb(21, 19, 19);
+        width: 100%;
+        height: 100%;
+        }
+
+    
+    @media screen and (max-width: 700px) {
+      div#example {
+        display: block;
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 699px) {
+      div#mobileo {
+        display: block;
+        display: none;
+      }
+    }
+    
+    @media screen and (max-width: 699px) {
+      div#mobile {
+        display: block;
+        display: none;
+      }
+    }
+    div.polaroid {
+      width: 74%;
+      height: 100%;
+      box-shadow: 0 4px 8px 0 rgba(241, 235, 235, 0.2), 0 6px 20px 0 rgba(116, 112, 112, 0.19);
+      text-align: center;
+      float: left;
+      margin-left: 12.30%;
+    }
+    
+    div.buttons{
+        width: 82%;
+        height: 55%;
+        float: left;
+        margin-left: 5%;
+    }
+
+    div.polaroid2 {
+      width: 30%;
+      height: 50%;
+      box-shadow: 0 4px 8px 0 rgba(241, 235, 235, 0.2), 0 6px 20px 0 rgba(116, 112, 112, 0.19);
+      float: right;
+      margin-top: 18%;
+      margin-right: 20% ;
+    }
+    div.polaroid3 {
+      width: 40%;
+      height: 40%;
+      box-shadow: 0 4px 8px 0 rgba(241, 235, 235, 0.2), 0 6px 20px 0 rgba(116, 112, 112, 0.19);
+      float: right;
+      margin-top: 6%;
+      margin-right: 9% ;
+    }
+
+
+    div.lowbuttons{
+        float: left;
+        margin-left: 5%;
+        width: 45%;
+    }
+
+    div.container {
+      padding: 10px;
+    }
+
+    @media screen and (max-width: 1105px) {
+          div#mobile1 {
+            display: block;
+            display: none;
+          }
+          p#mobile1 {
+            display: block;
+            display: none;
+          }
+        }
+
+    div.polaroid {
+      width: 74%;
+      height: 100%;
+      box-shadow: 0 4px 8px 0 rgba(24, 23, 23, 0.5), 0 6px 20px 0 rgba(10, 10, 10, 0.418);
+      text-align: center;
+      float: left;
+      margin-left: 6%;
+    }
+    
+    div.buttons{
+        width: 82%;
+        height: 55%;
+        float: left;
+        margin-left: 5%;
+    }
+
+    div.polaroid1 {
+      width: 72%;
+      height: 100%;
+      box-shadow: 0 4px 8px 0 rgba(24, 23, 23, 0.5), 0 6px 20px 0 rgba(10, 10, 10, 0.418);
+      text-align: center;
+      float: left;
+      margin-left: 12.30%;
+    }
+
+
+    div.lowbuttons{
+        float: left;
+        margin-left: 5%;
+        width: 37%;
+    }
+
+    div.container {
+      padding: 10px;
+    }
+
+
+
+
+    
+</style>
+
+<body>
+
+<nav class="navbar navbar-inverse" style="width: 100%; float: right ;" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#" style="color: white; font-size: 150%;"><b>FITNESS-CLUB</b></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="{% url 'index' %}" style="color: rgb(146, 145, 146);"><b>HOME</b></a></li>
+        <li><a href="{% url 'lol_Teacher' %}" style="color: rgb(146, 145, 146);"><b>OUR TRAINERS</b></a></li>
+        <li><a href="{% url 'history' %}" style="color: rgb(146, 145, 146);"><b>HISTORY</b></a></li>
+        <li><a href="{% url 'info' %}" style="color: rgb(146, 145, 146);"><b>DEVELOPER</b></a></li>
+        {% if user.is_authenticated %}
+          {% if position.is_authenticated %}
+            <li><a href="{% url 'post' %}"><b>FITNESS_SERVICES</b></a></li>
+          
+          {% else %}            
+            <li><a href="{% url 'paidpost' %}"><b>FITNESS_SERVICES</b></a></li>
+
+          {% endif %}
+        
+        {% else %}
+          <li><a href="{% url 'register' %}"><b>FITNESS_SERVICES</b></a></li>
+
+        {% endif %}
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {% if user.is_authenticated %}
+          <li><a href="{% url 'register' %}"><span ></span>welcome ,{{ user.username}}</a></li>
+          <li><a href="{% url 'register' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        
+        {% else %}
+        <li><a href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+  <img src="{% static  'history/boy.jpg' %}" alt="" class="responsive">
+</nav>
+      
+      <div class="container">
+        <h1><b> FITNESS-CLUB...</b></h1>
+        <p style="font-size: 180%;  color: rgb(129, 116, 116); ">These inspirational health and fitness websites not only boast top-notch designs. ... This content-rich website offers a plethora of valuable content and ... for keeping in touch with the club, the website also includes a Google ...
+        <p id="mobile1" style="font-size: 180%; color: rgb(129, 116, 116); ">Only when the button is clicked, the navigation bar will be displayed.</p>
+      </div>
+
+     
+
+      <div id="example" >
+        <div class="container"  id="lab" style="height: 30%; width: 80%;">
+          <aside style="width: 40%; height: 5%; float: right; margin: 3%; margin-top: 6%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.658), 0 6px 20px 0 rgba(8, 8, 8, 0.658);" >
+            <div class="embed-responsive embed-responsive-16by9" >
+              <iframe width="900" height="506" src="https://www.youtube.com/embed/1jugGLlLSTM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </aside>
+            <h1 style="margin-top: 7%;"><b>Our doors are again opening! </b></h1>
+            <p class="headread" style="font-size: 180%; color: rgb(129, 116, 116); " > Your health and wellbeing is our highest priority. As a result, we’ve made adjustments so we can all continue making Anytime Fitness Safe and Healthy place for you!​  Create a responsive video and scale it nicely to the parent element with an 16:9 aspect ratio</p> 
+        </div>
+      </div>
+
+      <div id="mobileo" style=" margin: 2%; width: 95%;" >
+        <div class="container"style="height: 100%; width: 85%;">
+            <div class="embed-responsive embed-responsive-16by9" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.658), 0 6px 20px 0 rgba(8, 8, 8, 0.658);" >
+              <iframe width="900" height="506" src="https://www.youtube.com/embed/1jugGLlLSTM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div style="width: 80%; margin: 6%;">
+              <h1><b>Our doors are again opening! </b></h1>
+              <p> Your health and wellbeing is our highest priority. As a result, we’ve made adjustments so we can all continue making Anytime Fitness Safe and Healthy place for you!​  Create a responsive video and scale it nicely to the parent element with an 16:9 aspect ratio</p> 
+            </div>
+            </div>
+        </div>
+        <h1 style="margin-top: 6%;"><b>Our doors are again opening! </b></h1>
+        <p class="headread" style="font-size: 180%; color: rgb(129, 116, 116); " > Your health and wellbeing is our highest priority. As a result, we’ve made adjustments so we can all continue making Anytime Fitness Safe and Healthy place for you!​  Create a responsive video and scale it nicely to the parent element with an 16:9 aspect ratio</p> 
+
+      </div>
+
+      <div>
+        <img  style="float: right; margin-right: 12%; " src="{% static 'logo/heading.png'%}" width="80%" height="40%" alt=""  alt=""><br>
+      <br><br>
+      </div >
+
+    
+
+      <div>
+        <div class="container"  >
+          <br>
+            <h2> During COVID-19</h2>
+            <div class="row">
+              
+              <div class="col-lg-4 col-xs-6 thumbnail"><img  src="https://www.24hourfitness.com/images/pages/health/video-image.jpg" alt=""></div>
+              <div class="col-lg-4 col-xs-6 thumbnail"><img  src="https://www.thenational.ae/image/policy:1.1025680:1591539470/CW_2705_Gym_10.jpg?f=16x9&w=1200&$p$f$w=b2b7aa7" alt=""  ></div>
+              <div class="col-lg-4 col-xs-6 thumbnail"><img  src="https://ichef.bbci.co.uk/news/976/cpsprodpb/2E24/production/_113321811_gymgroup.jpg" alt=""></div>
+              
+              <div class="col-lg-4 col-xs-6 thumbnail"><img  src="https://cdn.abcotvs.com/dip/images/6374153_081720-wabc-gym-img.jpg?w=1600" alt=""></div>
+              
+              <div class="col-lg-4 col-xs-6 thumbnail"><img  src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/5618154292001/8e65e685-d623-46e0-9274-db1ea62a1cba/c49e6cae-2c3b-4db9-8a0a-01d02b061bf1/1280x720/match/image.jpg" alt=""></div>
+              <div class="col-lg-4 col-xs-6 thumbnail"><img  src="https://prosightdirect.com/content/images/lead-images/blog/Personal-Trainers-Do-Dont-min.jpg" alt=""></div>
+              
+            </div>
+        <br>
+        </div>
+      </div>
+      
+                                                                   <!--bottom labtop-->
+
+
+                                                                   <script>
+        
+                                                                    function Chvi1() {
+                                                                        var iframe = document.getElementById('myvideo');
+                                                                            iframe.src = "https://www.youtube.com/embed/bl0pz6omY-E";
+                                                                        }
+                                                                        function Chvi2() {
+                                                                        var iframe = document.getElementById('myvideo');
+                                                                            iframe.src = "https://www.youtube.com/embed/dJlFmxiL11s";
+                                                                        }
+                                                                        function Chvi3() {
+                                                                        var iframe = document.getElementById('myvideo');
+                                                                            iframe.src = "https://www.youtube.com/embed/gQQXxt7KwVY";
+                                                                        }
+                                                                        function Chvi4() {
+                                                                        var iframe = document.getElementById('myvideo');
+                                                                            iframe.src = "https://www.youtube.com/embed/ukxQPb7lPDg";
+                                                                        }
+                                                                        function Chvi5() {
+                                                                        var iframe = document.getElementById('myvideo');
+                                                                            iframe.src = "https://www.youtube.com/embed/m4LWCV_cbjM";
+                                                                        }
+                                                                        function Chvi6() {
+                                                                        var iframe = document.getElementById('myvideo');
+                                                                            iframe.src = "https://www.youtube.com/embed/uDOudF7V3wg";
+                                                                        }
+                                                                        function chvi11() {
+                                                                        var iframe = document.getElementById('myshow');
+                                                                            iframe.src = "https://www.youtube.com/embed/Gg6qzcnXEQ4";
+                                                                        }
+                                                                        function chvi12() {
+                                                                        var iframe = document.getElementById('myshow');
+                                                                            iframe.src = "https://www.youtube.com/embed/Gg6qzcnXEQ4";
+                                                                        }
+                                                            
+                                                                    
+                                                                   </script>
+                                                            
+
+
+
+
+      <div class="polaroid1" id="mobile1" style="float: right; margin-right: 7.40%; margin-top: 5%;">
+        <div class="container">
+          <p style="font-size: 40px; float: left; margin-left: 30%;"><b>OUR SERVICES</b></p>
+          
+        </div>
+        <div class=" buttons" style="width: 40%; float: right; margin-right: 7%; margin-top: 1%;">
+          <p style="color: rgb(59, 55, 55); font-size: large;">Live Fit Gym is ready to promote its services online with its well structured website. Having a center-structured content, this website introduces</p>
+        
+          <button type="button" class="btn btn-primary btn-lg btn-block" onclick="chvi11()"><b>Why you should join US...</b></button>
+          <button type="button" class="btn btn-default btn-lg btn-block" onclick="chvi12()" ><b>How to manage your ACCOUNT...</b></button> 
+          
+        </div>
+        <aside class="container" style="float: left; margin-left: 5%; width: 40%; height: 50%; margin-top: -1%; background-color: black;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.973), 0 6px 20px 0 rgb(8, 8, 8); margin-bottom: 2%;">
+            <div class="embed-responsive embed-responsive-16by9" >
+              <iframe width="900" height="506" id="myshow" src="https://www.youtube.com/embed/Gg6qzcnXEQ4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div style="width: 80%; margin: 6%;">
+        </aside>
+        
+      </div>
+
+
+
+      <div class="polaroid" id="mobile1" style="margin-top: 8%;">
+        <p style="width: 80%; margin-left: 9%; font-size: 18px; margin-top: 3%; color: rgb(49, 46, 46);">These inspirational health and fitness websites not boast top-notch designs. as business hub, as is the case for this British gym's online presence. This content-rich website offers plethora valuable content</p>
+        <div class="container">
+          <p></p>
+          
+        <div class="lowbuttons">
+          
+          <h2 style="font-size: 30px;"><b>FITNESS-CLUB RESOURCES</b></h2>
+          <br>
+          <button type="button" class="btn btn-primary btn-lg btn-block" onclick="Chvi1()" ><b>JOIN THE FITNESS-CLUB GYM...</b></button>
+          <button type="button" class="btn btn-default btn-lg btn-block" onclick="Chvi2()" ><b>JOIN FITNESS EXERCISE GROUP...</b></button>
+          <button type="button" class="btn btn-primary btn-lg btn-block" onclick="Chvi3()" ><b>JOIN THE FITNESS YOGA GROUP...</b></button>
+          <button type="button" class="btn btn-default btn-lg btn-block" onclick="Chvi4()" ><b>JOIN THE KARATE-CLUB...</b></button>
+          <button type="button" class="btn btn-primary btn-lg btn-block" onclick="Chvi5()" ><b>JOIN FITNESS DANCE CLUB...</b></button>
+          <button type="button" class="btn btn-default btn-lg btn-block" onclick="Chvi6()" ><b>JOIN  ARBIC-DANCE CLASS...</b></button> 
+          <br><br>
+      </div>
+        <aside class="container" style="float: left; margin-left: 5%; width: 45%; height: auto; margin-top: 6%;">
+          <div>
+            <div class="embed-responsive embed-responsive-16by9" class="container" style="margin-left: 5%; width: 89%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.658), 0 6px 20px 0 rgba(8, 8, 8, 0.658);" >
+              <iframe width="990" height="506" id="myvideo" src="https://www.youtube.com/embed/gQQXxt7KwVY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            {% if user.is_authenticated %}
+                  <div style="align-items: center; margin-top: 4%; ">
+                      <a type="button"  class="btn btn-primary btn-lg btn-block" href="{% url 'lol_Teacher' %}" ><b>Take The Free Trial NOW!</b></a>                
+                  </div>
+            {% else %}
+              <div style=" margin-top: 4%; margin-right: 0%;" >
+                <a type="button"  class="btn btn-primary btn-lg btn-block" href="{% url 'register' %}"><b>Take The Free Trial NOW!</b></a>  
+                <br>
+                
+              </div>
+               
+            {% endif %}
+          </div>
+          
+        </aside>
+        
+      </div>
+      </div>
+
+      <!--bottom buutton for mobile-->
+      <style>
+        @media screen and (min-width: 1105px) {
+          div#mobiles{
+            display: block;
+            display: none;
+          }
+        }
+        @media screen and (max-width: 1104px) {  
+          div.shado {
+            width: 90%;
+            height: 100%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+            float: left;
+            margin-left: 1%;
+          }
+
+          div.shadolast {
+            width: 90%;
+            height: 100%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+            float: right;
+            margin-right: 1%;
+            margin-top: 15%;
+
+          }
+          
+          
+        }   
+                                                 
+      </style>
+                                                             <!--bottom mobile-->
+                                                             
+
+                                                           
+
+      <script>
+        
+            function Image61() {
+              var iframe = document.getElementById('video');
+                iframe.src = "https://www.youtube.com/embed/bl0pz6omY-E";
+            }
+            function Image62() {
+              var iframe = document.getElementById('video');
+                iframe.src = "https://www.youtube.com/embed/dJlFmxiL11s";
+            }
+            function Image63() {
+              var iframe = document.getElementById('video');
+                iframe.src = "https://www.youtube.com/embed/gQQXxt7KwVY";
+            }
+            function Image64() {
+              var iframe = document.getElementById('video');
+                iframe.src = "https://www.youtube.com/embed/ukxQPb7lPDg";
+            }
+            function Image65() {
+              var iframe = document.getElementById('video');
+                iframe.src = "https://www.youtube.com/embed/m4LWCV_cbjM";
+            }
+            function Image66() {
+              var iframe = document.getElementById('video');
+                iframe.src = "https://www.youtube.com/embed/uDOudF7V3wg";
+            }
+            function Changevideo11() {
+              var iframe = document.getElementById('my');
+                iframe.src = "https://www.youtube.com/embed/Gg6qzcnXEQ4";
+            }
+            function Changevideo12() {
+              var iframe = document.getElementById('my');
+                iframe.src = "https://www.youtube.com/embed/Gg6qzcnXEQ4";
+            }
+
+        
+       </script>
+
+
+
+      <div class="shado" id="mobiles" >
+        <div class="container">
+          <p style="font-size: 40px; text-align: center;"><b>FITNESS-TEC..</b></p>
+          <div class="embed-responsive embed-responsive-16by9" style="box-shadow: 0 4px 8px 0 rgba(73, 72, 72, 0.973), 0 6px 20px 0 rgb(53, 51, 51);" >
+            <iframe width="900" height="506" id="my" src="https://www.youtube.com/embed/Gg6qzcnXEQ4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        <div class=" buttons" style="float: left; margin-left: 8%; margin-top: 6%; ">
+          <p style="color: rgb(59, 55, 55); font-size: large;">Live Fit Gym is ready to promote its services online with its well structured website. Having a center-structured content, this website introduces</p>
+          <button type="button" class="btn btn-primary btn-lg btn-block"  onclick="Changevideo11()"><b>Why you should join US...</b></button>
+          <button type="button" class="btn btn-default btn-lg btn-block"  onclick="Changevideo12()"><b>Manage your ACCOUNT...</b></button>
+          <br> 
+        </div>
+        </div>
+      </div>
+      
+
+      
+      <div class="shadolast" id="mobiles" >
+        <div class="container">
+          <p style="font-size: 40px; text-align: center;"><b>OUR SERVICES</b></p>
+          <div class="embed-responsive embed-responsive-16by9" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.658), 0 6px 20px 0 rgba(8, 8, 8, 0.658);" >
+            <iframe width="900" height="506" id="video" frameborder="0" src="https://www.youtube.com/embed/ukxQPb7lPDg" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>         </iframe>
+          </div>
+        <div class=" buttons" style="float: left; margin-left: 8%; margin-top: 4%; ">
+        {% if user.is_authenticated %}    
+          <a type="button" class="btn btn-primary btn-lg btn-block" href="{% url 'lol_Teacher' %}" ><b>TRY 5'Days FREE TRIAL ..</b></a>
+        {% else %}
+          <a type="button" class="btn btn-primary btn-lg btn-block" href="{% url 'register' %}" ><b>TRY 5'Days FREE TRIAL ..</b></a>
+        {% endif %}
+          <br>
+          <p style="color: rgb(59, 55, 55); font-size: large;">Live Fit Gym is ready to promote its services online with its well structured website. Having a center-structured content, this website introduces</p>
+          
+          <button type="button" class="btn btn-primary btn-lg btn-block" onclick="Image61()"><b>THE FITNESS-CLUB GYM..</b></button>
+          <button type="button" class="btn btn-default btn-lg btn-block" onclick="Image62()"><b>FIT, EXERCISE GROUP...</b></button> 
+          <button type="button" class="btn btn-primary btn-lg btn-block" onclick="Image63()"><b>FITNESS YOGA GROUP...</b></button>
+          <button type="button" class="btn btn-default btn-lg btn-block" onclick="Image64()"><b>THE KARATE-CLUB...</b></button> 
+          <button type="button" class="btn btn-primary btn-lg btn-block" onclick="Image65()"><b>FITNESS DANCE CLUB...</b></button>
+          <button type="button" class="btn btn-default btn-lg btn-block" onclick="Image66()"><b>ARBIC-DANCE CLASS...</b></button> 
+       
+        </div>
+        </div>
+      </div>
+      
+        
+</body>
+</html>

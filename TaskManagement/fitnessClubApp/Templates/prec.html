@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HOMEnew</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    
+
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="newhome.html" class="fa fa-home" ><b>FITNESS-CLUB</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'index' %}"><b>HOME</b></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'lol_Teacher' %}"><b>TRAINERS</b></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'history' %}"><b>HISTORY</b></a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'info' %}"><b>DEVELOPER</b> </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="creator.html"><b>[REGISTER]</b> </a>
+        </li>
+        </ul>
+       
+    </div>  
+    </nav>
+    <img src="{% static  'history/boy.jpg' %}" alt="" class="responsive">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    
+    <div>
+        <div class="container" id="space">
+        <aside id="top">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=WTgfsioZCbM" > </iframe>
+            </div>
+        </aside>
+        <h2><b>... Our doors are again opening! </b></h2>
+            <p id="color"> <br>Your health and wellbeing is our highest priority. As a result, we’ve made adjustments so we can all continue making Anytime Fitness Safe and Healthy place for you!​  Create a responsive video and scale it nicely to the parent element with an 16:9 aspect ratio</p>
+       
+        </div>
+    </div>
+    
+    <br>
+    <br><br>
+    <br><br>
+    <div id="sec">
+        <h1 class="why1" id="head" ><b>Why Should be with us?<b></h1>
+            <img src="{% static 'logo/imghome.png' %}" class="res" alt="">
+            <br>
+    </div>
+    
+    <br><br><br><br>
+    <h1 class="why1"><b><u>MEMBERSHIP BENEFITS<u><b></h1>
+        
+   
+    <div id="tagg" class="coutainer" class="main" >
+        <div class="row" >
+          <div class="col-md-3"  >
+              <img src="{% static 'logo/11h.png'%}" width="100%" height="90%" alt="" >
+              <br>
+              <br>
+
+          </div>
+          <div class="col-md-3"  >
+            <img src="{% static 'logo/12h.png' %}" width="100%" height="90%" alt="" class="cardl">
+            <br>
+            <br>
+
+          </div>
+          <div class="col-md-3"  >
+            <img src="{% static 'logo/13h.png' %}" alt="" width="100%" height="95%" class="cardl">
+            <br>
+            <br>
+            <br>
+            <br>
+
+            
+          </div>
+          <div class="col-md-3">
+            <img src="{% static 'logo/14h.png' %}" alt="" width="100%" height="96%" class="cardl">
+
+          </div>
+        </div>
+    </div>
+        <br><br>
+        <div>
+            
+        </div>
+        <div class="option">
+            <h3 class="heading"><b>Fitness Blogs<b></b></h3>
+            <a class="myButton" id='js'   >FITNESS</a>
+            <a class="myButton" id='js'  >Muscle-T</a>
+            <a class="myButton" id='js'  >SPORT</a>
+            <a class="myButton" id='js'  >DANCE</a>
+            <a class="myButton" id='js'  >L - YOGA</a>
+            <a class="myButton" id='js'  >RUN-UP</a>
+            <a class="btn btn-dark" id="try5" href="{% url 'lol_Teacher' %}" onclick="logic()"><b>Start Free Trial NOW! 5'DAYS</b></a>
+        </div>
+    </div>
+    
+    <br>
+    <br>
+    <div class="bottom">
+        <br>
+        <br>
+        <b>
+            <br>
+            <br>
+            <br>
+            <br>
+        </b>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>no/internet</title>
+</head>
+<style>
+    @media screen and (min-width: 500px) {
+        #mobilenodisplay{
+            display: block;
+            display: none;          
+      }
+    }
+    @media screen and (max-width: 500px) {
+        #nodisplay {
+            display: block;
+            display: none; 
+      }
+    }
+</style>
+<body class="countainer" style="text-align: center; margin-top: 10%;">
+    <img id="mobilenodisplay" style="width: 90%; margin-top: 10%; " src="{% static 'photos/inernet.png' %}" alt="">   <!--mobile-->
+    <img id="nodisplay" style="width: 30%;" src="{% static 'photos/inernet.png' %}" alt="">         <!--laptop-->
+</body>
+</html>

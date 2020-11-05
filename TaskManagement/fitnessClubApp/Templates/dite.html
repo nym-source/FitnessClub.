@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap NAV-POsT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  
+  {%load static %}
+</head>
+<style>
+    @media screen and (min-width: 780px) {
+      #mobile{
+        display: block;
+        display: none;
+        
+
+      }
+    }
+    @media screen and (max-width: 780px) {
+      ul#laptop{
+        display: block;
+        display: none;
+      }
+    }
+</style>
+
+
+<body class="laptop" style="height:1500px">
+    <nav class="navbar navbar-inverse navbar-fixed-top" style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.356), 0 6px 20px 0 rgba(0, 0, 0, 0.37);">
+    <div class="container-fluid"  >
+        <div class="navbar-header" >
+        <a class="navbar-brand" href="#" style="color: cornsilk;"><b>Fitness-Club-Classes</b></a>
+        </div>
+        <ul class="nav navbar-nav" id="laptop" >
+          
+          <li><a href="{% url 'post' %}">Fitness Gym</a></li>
+          <li><a href="{% url 'fitness' %}">Fitness Training</a></li>
+          <li><a href="{% url  'meditationpost1' %}"> Meditation</a></li>
+          <li><a href="{% url  'yogapost' %}"> Yoga Club</a></li>
+          <li><a href="{% url  'dancepost' %}">Dance Club</a></li>
+          <li><a href="{% url  'arbicpost' %}">Arbic Dance Club</a></li>
+          <li><a href="{% url  'paidpost' %}">Fitness Event</a></li>
+          <li><a href="{% url  'ditepost' %}">Fitness Dite Awareness</a></li></ul>
+        <li  class="nav navbar-nav" id="mobile" ><a class="dropdown-toggle" data-toggle="dropdown" href="#"style="color: blanchedalmond; float: right; margin-right: 5%; " >Fitness-Club Service Fields manu..  <span class="caret" ></span> </a>
+            <ul class="dropdown-menu"  >
+              <li><a href="{% url 'post' %}">Fitness Gym</a></li>
+              <li><a href="{%url 'fitness' %}">Fitness Training</a></li>
+              <li><a href="{%url 'meditationpost1' %}">Fitness Karate</a></li>
+              <li><a href="{%url 'yogapost' %}">Fitness Yoga Club</a></li>
+              <li><a href="{%url 'ditepost' %}">Fitness Dite Awareness</a></li>
+              <li><a href="{%url 'dancepost' %}">Fitness Dance Club</a></li>
+              <li><a href="{%url 'arbicpost' %}">Fitness Arbic Dance Club</a></li>
+              <li><a href="{%url 'paidpost' %}">Fitness Event</a></li>
+            </ul>
+        </li>
+    </div>
+    </nav>
+    
+    
+
+
+    <style>
+        
+        
+         
+        div.polaroid2 {
+          width: 40%;
+          height: auto;
+          box-shadow: 0 4px 8px 0 rgba(241, 235, 235, 0.2), 0 6px 20px 0 rgba(116, 112, 112, 0.19);
+          float: right;
+          margin-top: 15%;
+          margin-right: 5% ;
+        }
+        
+        
+        div.container {
+          padding: 10px;
+        }
+        div.viedo{
+          margin: 1%;
+        }
+        
+        @media only screen and (min-width: 900px) {
+              div.mobilebo{
+                display: block;
+                display: none;
+              }
+
+              div #heading{
+                display: none;
+              } 
+              div#polaroid {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.575), 0 6px 20px 0 rgba(0, 0, 0, 0.521);
+                align-items: center;
+                margin-top: 6%; width: 80%; height: auto; 
+            }
+              div.lowlaptop{
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.575), 0 6px 20px 0 rgba(0, 0, 0, 0.521);
+                width: 98%;
+                float: left;
+                align-items: center;
+                margin-top: 20px;
+               }
+             
+        }  
+        @media only screen and (max-width: 900px) {
+              div #heading1{
+                display: none;
+                text-align: center;
+              }
+              div#polaroid {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.575), 0 6px 20px 0 rgba(0, 0, 0, 0.521);
+                align-items: center;
+                margin-top: 30%; width: 93%; height: auto; 
+              }
+              div#lowlaptop{
+                display: block;
+                display: none;
+              } 
+              div.mobilebo{
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.575), 0 6px 20px 0 rgba(0, 0, 0, 0.521);
+                align-items: center;
+                margin-top: 6%; width: 90%; height: auto;
+                float: right;
+                background-color: rgba(255, 251, 251, 0.918);
+              }
+        }  
+          </style>
+    <div>
+        <div class="container" id="polaroid">
+          <div class="embed-responsive embed-responsive-16by9"  >
+            <iframe width="900" height="506" src="https://www.youtube.com/embed/3xWsIkw_OEM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+    </div>
+
+
+    
+    <div class="mobilebo" >
+      <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;" >
+        <iframe width="900" height="506" src="https://www.youtube.com/embed/oc1HygSgKEc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;" >
+        <iframe width="900" height="506" src="https://www.youtube.com/embed/yYoYFpt4jmg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;" >
+        <iframe width="900" height="506" src="https://www.youtube.com/embed/24v_ocQGLsc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;" >
+        <iframe width="900" height="506" src="https://www.youtube.com/embed/CiAzXkNoQaU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      </div>
+      <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;" >
+        <iframe width="900" height="506" src="https://www.youtube.com/embed/OUctE0Gv5Pk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      </div>
+      <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;" >
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/8VOP0LND9l8?list=TLPQMDQxMTIwMjDklTTMq4l2qQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;" >
+        <iframe width="900" height="506" src="https://www.youtube.com/embed/XcKtHBQ3SB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </div>
+
+    </div>
+
+    
+      <div class="container" id="lowlaptop">
+        
+        <aside style="height: 100%; width: 48%; float: right; margin-right: -5%; margin-top: 18%; box-shadow: 0 4px 8px 0 rgba(19, 18, 18, 0.918), 0 6px 20px 0 rgba(20, 20, 20, 0.788);">  
+              <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;"  >
+                <iframe width="900" height="506" src="https://www.youtube.com/embed/oc1HygSgKEc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>              </div>
+              <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;"   >
+                <iframe width="900" height="506" src="https://www.youtube.com/embed/24v_ocQGLsc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;"  >
+                <iframe width="900" height="506" src="https://www.youtube.com/embed/yYoYFpt4jmg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;"   >
+                <iframe width="900" height="506" src="https://www.youtube.com/embed/CiAzXkNoQaU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>              </div>
+              <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;" >
+                <iframe width="900" height="506" src="https://www.youtube.com/embed/OUctE0Gv5Pk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>              </div>
+              <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;" >
+                <iframe width="900" height="506" src="https://www.youtube.com/embed/nXp-dtzKUfg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>              </div>
+              
+              
+            <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;" >
+              <iframe width="900" height="506" src="https://www.youtube.com/embed/IzkS_pH5ebI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            </div>
+        </aside>
+          <div style="float: left; height: 100%; width: 48%; margin-top: 18%; margin-left: -5%; box-shadow: 0 4px 8px 0 rgba(19, 18, 18, 0.918), 0 6px 20px 0 rgba(20, 20, 20, 0.788);">
+            <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;" >
+              <iframe width="900" height="506" src="https://www.youtube.com/embed/zPqAr6n7MAw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            </div>
+            <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;" >
+              <iframe width="900" height="506" src="https://www.youtube.com/embed/OUctE0Gv5Pk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            </div>
+            <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;" >
+              <iframe width="900" height="506" src="https://www.youtube.com/embed/QQwTCdxB8Ck" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            </div>
+            <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;" >
+              <iframe width="900" height="506" src="https://www.youtube.com/embed/fQPeWh8Ql_s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            </div>
+            <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;" >
+              <iframe width="400" height="225" src="https://www.youtube.com/embed/8VOP0LND9l8?list=TLPQMDQxMTIwMjDklTTMq4l2qQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;"  >
+              <iframe width="900" height="506" src="https://www.youtube.com/embed/pSK7eNh1r9E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            </div>
+            <div class="embed-responsive embed-responsive-16by9" style="margin-top: 4%;"  >
+              <iframe width="900" height="506" src="https://www.youtube.com/embed/XcKtHBQ3SB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            </div>
+          </div>
+        
+
+</body>
+</html>

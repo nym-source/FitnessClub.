@@ -1,0 +1,207 @@
+<html>
+    <head>
+        <title>history page
+        </title>
+        {%load static %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      
+      <style>
+        #tag{
+          position: relative;
+          margin-top: 4%;
+          margin-left: 7%;
+          margin-right: 20%;
+          width: 70%;
+        }
+        .search{
+            float: left;
+        }
+        #shado{
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.658), 0 6px 20px 0 rgba(8, 8, 8, 0.658);
+          
+        }
+        input[type=text] {
+            width: 130px;
+            float: left;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            background-position: 10px 10px; 
+            background-repeat: no-repeat;
+            padding: 11px 15px 3px 35px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+          }
+          
+          input[type=text]:focus {
+            width: 100%;
+          }
+
+
+          .space{
+              position: relative;
+              top: 120px;
+          }
+
+
+
+
+      </style>
+        
+    </head>
+    <body>
+      <section>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+          <a class="navbar-brand" href="newhome.html" class="fa fa-home" ><b>FITNESS-CLUB</b></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'index' %}"><b>HOME</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'lol_Teacher' %}"><b>TRAINERS</b></a>
+             </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'history' %}"><b>HISTORY</b></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'info' %} "><b>DEVELOPER</b></a>
+              </li>    
+              <li class="nav-item">
+                <input type="text"  class="search" name="search" placeholder="Search..">
+
+              </li>
+              </ul>
+          </div>  
+          </nav>       
+        
+        <div id="tag" class="coutainer" class="main">
+            <div class="row" >
+              <div class="col-md-4">
+                <br>
+               <br>
+                <div class="card" class="border" id="shado" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'history/gaurav.jpg' %}" alt="gaurav taneja">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u> Gaurav Taneja </u></b></h5>
+                      <p class="card-text">Gaurav Taneja is a popular youtube vlogger and has a youtube channel called Flying Beast and Fit Muscle TV. Now, he has more than ONE million subscribers on youtube and he was also awarded by youtube with a gold play button. </p>
+                      <a href="https://www.indiatimes.com/lifestyle/gaurav-taneja-biography-516865.html#:~:text=8Gaurav%20Taneja%20was%20born%20on,the%20health%20and%20fitness%20industry." class="btn btn-primary"> <b>Want know more </b></a>
+                      <br>
+                    </div>
+                </div>
+               </div>
+               
+               <br>
+               <div class="col-md-4">
+                <br>
+                <br>
+                <div class="card" class="border" id="shado" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'history/wasim00.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>Wasim Khan</u></b></h5>
+                      <p class="card-text">Wasim Khan of India has created history by winning the bodybuilding title in the International Bodybuilding and Fitness Federation event in Rome in June. He is now the only Indian to win two back to back overall IBFF titles, having won the title in Slovenia</p>
+                      <a href="https://www.indiatimes.com/news/sports/salute-wasim-khan-creates-history-for-india-in-bodybuilding-234403.html" class="btn btn-Dark"><b>Want know more </b></a>
+                      <br>
+                    </div>
+                </div>
+               </div>
+               <br>
+               <br>
+               <br>
+               <div class="col-md-4">
+                <br>
+                <br>
+                <div class="card" id="shado" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'history/ghalot.jpg' %}" alt="Mukesh Singh Gahlot">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>Mukesh Singh Gahlot</u></b></h5>
+                      <p class="card-text">Mukesh Singh Gahlot is an Indian bodybuilder and powerlifter, who represented India in many international competitions and won many medals..[citation needed] He also has the national record of winning 4 times Mr India title. <br> (in 2008, 2009, 2010, and 2012)</p>
+                      <a href="https://en.wikipedia.org/wiki/Mukesh_Singh_Gehlot" class="btn btn-primary"><b>Want know more </b></a>
+                      <br>
+                    </div>
+                </div>
+               </div>
+               <br>  
+               <br>
+               <br>
+               <br>
+
+               <div class="col-md-4">
+                <br>
+                <br>
+                <div class="card" id="shado" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'history/bani j.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>Bani J</u></b></h5>
+                      <p class="card-text">Gurbani Judge, better known as VJ Bani and also Bani J, is an Indian fitness model, actress and a former MTV India presenter. She is known for participating in MTV Roadies. She was a contestant in the reality show Bigg Boss 10 and became the first runner-up in 2016.Bani J is a popular Indian TV presenter, actor, and fitness model. She is best known for participating in 'MTV' </p>
+                      <a href="https://en.wikipedia.org/wiki/Gurbani_Judge" class="btn btn-primary"><b>Want know more </b></a>
+                      <br>
+                    </div>
+                </div>
+               </div>
+               <br>
+               <br>
+               <br>
+               <br>
+               <br>
+
+               <div class="col-md-4">
+                <br>
+                <br>
+                <div class="card" id="shado" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'history/shweta.jpg'%}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>Shweta Rathore</u></b></h5>
+                      <p class="card-text">Confidently proving that women are as iron-casted as men is Shweta Rathore. She is the first Indian female bodybuilder to win a medal at the WBPF World Championship. In fact, her fitness journey started during her schooling years. And her endeavours at international events have always been to promote a fit way to life.</p>
+                      <a href="https://www.instagram.com/ishwetarathore/?hl=en" class="btn btn-primary"><b>Want know more </b></a>
+                      <br>
+                    </div>
+                </div>
+               </div>
+               <br>
+               <br>
+               <br>
+               <br>
+               <br>
+               <br>
+
+               <div class="col-md-4">
+                <br>
+                <br>
+                <div class="card" id="shado" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'history/sonali.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title"><b><u>Sonali Swami</u></b></h5>
+                      <p class="card-text">Whenever we begin to imagine a bodybuilder, we often assume that they must have always been pretty fit. But that’s not the case with Sonali Swami–who became a professional bodybuilder at 41.
+                        Redefining the way we perceive ageing, this Bengaluru-based bodybuilder started her training only after becoming a mother. Sonali wrote about her journey on Instagram.</p>
+                      <a href="https://www.instagram.com/sonali_swami/?hl=en" class="btn btn-primary"><b>Want know more </b></a>
+                      <br>
+                    </div>
+                </div>
+               </div>
+            </div>
+          </div>    
+      </section>
+
+      
+
+      <div class="bottom">
+        <br>
+        <br>
+        <br>
+    </div>
+ 
+           
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration for Fitness</title>
+</head>
+<body>
+    <style>
+    @media screen and (min-width: 701px) {
+        div.polaroid {
+        width: 20%;
+        height: 100%;
+        box-shadow: 0 4px 8px 0 rgba(8, 8, 8, 0.2), 0 6px 20px 0 rgba(14, 13, 13, 0.19);
+        margin-left: 38%;
+        border-style: double;
+        margin-top: 4%; 
+        border-color: rgba(14, 13, 13, 0.19); 
+        background-color: rgba(14, 13, 13, 0.19);
+
+        
+        }
+    }
+    @media screen and (max-width: 700px) {
+        div#pol{
+            width: 70%;
+            height: 60%;
+            box-shadow: 0 4px 8px 0 rgba(8, 8, 8, 0.2), 0 6px 20px 0 rgba(14, 13, 13, 0.19);
+            margin-left: 15%;
+            border-style: double;
+            margin-top: 4%; 
+            border-color: rgba(14, 13, 13, 0.19); 
+            background-color: rgba(14, 13, 13, 0.19);
+        }
+    }
+    </style>
+    <div style="background-color: rgb(12, 12, 12); width: auto; height: 5%; margin-top: -2%; box-shadow: 0 4px 8px 0 rgba(17, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.349) ; " >
+        <h1 style="color: blanchedalmond; padding: 1%; padding-top: 1.80%; " >Fitness-Club</h1>
+      
+    </div>
+    
+    <div class="polaroid" id="pol" >
+        <h3 style="background-color: black; color: blanchedalmond; margin-top: -1%; padding: 5%;">Login</h3>
+            
+        <div class="container" style=" font-size: x-large; padding: 3%;  align-items: center; "> 
+            {% block body %}
+            <b><form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+        </b>
+        <div >
+            <button type="submit" style="padding: 4px; font-size: large; align-items: center;  background-color: rgba(14, 13, 13, 0.19); " ><b>SUBMIT...</b></button>
+            <br>
+            
+        </div>
+        </form>
+        {% endblock %}
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
